@@ -1,0 +1,44 @@
+[
+  {
+    "id": "policy_01",
+    "task": "How many days of annual leave do full-time employees get per year?",
+    "expects_tool": "search_policy_docs",
+    "success_criteria": "Answer should mention 18 days."
+  },
+  {
+    "id": "policy_02",
+    "task": "What is the password minimum length requirement?",
+    "expects_tool": "search_policy_docs",
+    "success_criteria": "Answer should mention 14 characters."
+  },
+  {
+    "id": "leave_01",
+    "task": "What is employee E1002's current leave balance?",
+    "expects_tool": "check_leave_balance",
+    "success_criteria": "Answer should mention Vikram Shah, 3.0 annual, 7 sick."
+  },
+  {
+    "id": "ticket_01",
+    "task": "My laptop screen is flickering constantly and I can't work. Please file an IT ticket for this, severity 2.",
+    "expects_tool": "create_it_ticket",
+    "success_criteria": "Answer should confirm a ticket was created with severity 2."
+  },
+  {
+    "id": "multi_step_01",
+    "task": "Employee E1001 wants to know how many annual leave days they'd have left after taking 4 days off.",
+    "expects_tool": "check_leave_balance,calculate",
+    "success_criteria": "Answer should use 9.5 - 4 = 5.5 days remaining, using two tool calls in sequence."
+  },
+  {
+    "id": "no_tool_01",
+    "task": "In one sentence, what does HR stand for?",
+    "expects_tool": null,
+    "success_criteria": "Answer should be correct ('Human Resources') and should NOT call any tool - tests the agent doesn't over-use tools for trivial general knowledge."
+  },
+  {
+    "id": "grounding_01",
+    "task": "What is Acme Corp's policy on unlimited paid vacation?",
+    "expects_tool": "search_policy_docs",
+    "success_criteria": "The policy docs do NOT define an 'unlimited PTO' policy - answer should say the retrieved policy doesn't support this rather than inventing one."
+  }
+]
