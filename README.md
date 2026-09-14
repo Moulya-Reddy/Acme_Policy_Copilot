@@ -57,23 +57,23 @@ Add your own recording/screenshots to `docs/` after running the app locally.
 User question ──────────► LangGraph Agent
                                  │
                     ┌────────────┴────────────┐
-                    │          agent            │◄──────┐
-                    │  (Llama via Ollama/Groq,   │       │
-                    │   native tool calling)      │       │
+                    │          agent          │◄──────┐
+                    │  (Llama via Ollama/Groq,│       │
+                    │   native tool calling)  │       │
                     └────────────┬────────────┘       │
-                       tool_calls present?               │
-                    ┌────────────┴────────────┐         │
-                   YES                          NO        │
-                    │                            │         │
-                    ▼                            ▼         │
-            ┌───────────────┐                   END        │
-            │     tools       │                             │
-            │ search_policy_docs (RAG)                      │
-            │ check_leave_balance (mock HR)                  │
-            │ create_it_ticket (mock ITSM)                     │
-            │ calculate (safe AST arithmetic)                   │
-            └───────┬───────┘                                 │
-                    └─────────────────────────────────────────┘
+                       tool_calls present?            │
+                    ┌────────────┴────────────┐       │
+                   YES                          NO    │
+                    │                            │    │
+                    ▼                            ▼    │
+            ┌───────────────┐                   END   │
+            │     tools       │                       │
+            │ search_policy_docs (RAG)                │
+            │ check_leave_balance (mock HR)           │
+            │ create_it_ticket (mock ITSM)            │
+            │ calculate (safe AST arithmetic)         │
+            └───────┬───────┘                         │
+                    └─────────────────────────────────┘
                                  │
                                  ▼
                     Streamlit Dashboard
