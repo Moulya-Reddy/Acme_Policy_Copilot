@@ -30,19 +30,6 @@ answer.
 
 ---
 
-## 📸 Demo
-
-The **`docs/`** folder is reserved for demonstration assets for this project, following the same
-pattern as this author's other repositories:
-
-- `demo.mov` – Walkthrough of the Streamlit app answering a policy question, checking a leave
-  balance, and filing a ticket.
-- `evaluation.png` – Screenshot of the evaluation suite's faithfulness and tool-selection results.
-
-Add your own recording/screenshots to `docs/` after running the app locally.
-
----
-
 ## 🏗️ Architecture
 
 ```text
